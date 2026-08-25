@@ -1,5 +1,5 @@
 img {
-    width: 200px;
+    width: 300px;
 }
 
 body {
@@ -7,4 +7,21 @@ body {
     font-family: Inter, sans-serif;
     background-color: black;
     color: white;
+}
+
+.link-style1 {
+    color: blue;
+    text-decoration: underline;
+}
+
+.link-style1:visited {
+    color: blueviolet;
+    text-decoration: underline;
+
+}
+
+.link-style1:hover {
+    color: darkblue;
+    text-decoration: underline;
+    font-weight: bolder;
 }
