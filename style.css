@@ -1,5 +1,5 @@
 img {
-    width: 300px;
+    width: 350px;
 }
 
 body {
@@ -10,7 +10,7 @@ body {
 }
 
 .link-style1 {
-    color: yellow;
+    color: lightseagreen;
     text-decoration: underline;
 }
 
