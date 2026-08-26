@@ -4,10 +4,10 @@ img {
 
 body {
     text-align: center;
-    font-family: Inter, sans-serif;
+    font-family: 'Geist Mono', sans-serif;
     font-size: 20px;
-    background-color: black;
-    color: white;
+    background-color: #080808;
+    color: #FAFAFA;
 }
 
 .link-style1 {
