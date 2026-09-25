@@ -6,7 +6,7 @@ body {
     text-align: center;
     font-family: 'Geist Mono', sans-serif;
     font-size: 18px;
-    background-color: #080808;
+    background-color: #090909;
     color: #FAFAFA;
 }
 
@@ -18,7 +18,7 @@ body {
 .link-style1:hover {
     color: blueviolet;
     text-decoration: underline;
-    font-weight: bolder;
+    font-weight: inherit;
 }
 
 .normal-link {
