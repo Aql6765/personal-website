@@ -4,7 +4,7 @@ img {
 
 body {
     text-align: center;
-    font-family: 'Sulphur Point', sans-serif;
+    font-family: 'Geist', sans-serif;
     font-size: 18px;
     background-color: #090909;
     color: #FAFAFA;
@@ -22,8 +22,7 @@ body {
     height: 100vh;
     color: #090909;
     overflow: hidden;
-    opacity: 1;
-    transition: opacity 1.5s ease;
+    transition: opacity 2s ease;
 }
 
 .loading-screen.hidden {
