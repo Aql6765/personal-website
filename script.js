@@ -1,6 +1,7 @@
 const loadingScreen = document.querySelector(".loading-screen")
 const loadingText = document.querySelector(".loading-text")
 const loadingSkip = document.querySelector(".loading-skip")
+const siteContent = document.querySelector(".site-content")
 const loadingTime = Math.floor(Math.random() * (15000 - 5000 + 1)) + 5000;
 const loadingMessages = [
     "Loading...",
@@ -53,6 +54,7 @@ const loadingTextChange = setInterval(() => {
     loadingText.textContent = loadingMessages[Math.floor(Math.random() * loadingMessages.length)];
 }, 1000)
 
+siteContent.classList.add("hidden")
 history.scrollRestoration = "manual";
 window.scrollTo(0, 0)
 
@@ -61,6 +63,7 @@ setTimeout(() => {
     loadingText.textContent = loadingMessagesDone[Math.floor(Math.random() * loadingMessagesDone.length)];
     loadingScreen.classList.add("hidden")
     setTimeout(() => {
+        siteContent.classList.remove("hidden")
         loadingScreen.style.display = "none"
         document.body.style.overflow = "scroll";
     }, 2000)
@@ -72,6 +75,7 @@ if (loadingSkip) {
         loadingText.textContent = loadingMessagesSkipped[Math.floor(Math.random() * loadingMessagesSkipped.length)];
         loadingScreen.classList.add("hidden")
         setTimeout(() => {
+            siteContent.classList.remove("hidden")
             loadingScreen.style.display = "none"
             document.body.style.overflow = "scroll";
         }, 2000)

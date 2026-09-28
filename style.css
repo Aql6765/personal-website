@@ -14,6 +14,17 @@ body {
     overflow: hidden;
 }
 
+.site-content {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 1s ease;
+}
+
+.site-content.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
 .loading-screen {
     display: flex;
     align-items: center;
@@ -37,6 +48,22 @@ body {
     transform: translateY(-20px);
     gap: 3px;
     color: lightseagreen;
+}
+
+.loading-skip {
+    color: #FAFAFA;
+    background-color: #090909;
+    border: 1px solid #FAFAFA;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.loading-skip:hover {
+    background-color: #FAFAFA;
+    color: #090909;
+    transform: translateY(-2px);
 }
 
 .link-style1 {
