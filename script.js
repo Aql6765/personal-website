@@ -64,17 +64,26 @@ const loadingTextChange = setInterval(() => {
 siteContent.classList.add("hidden")
 history.scrollRestoration = "manual";
 window.scrollTo(0, 0)
+console.log(window.location.search)
 
-setTimeout(() => {
-    clearInterval(loadingTextChange)
-    loadingText.textContent = loadingMessagesDone[Math.floor(Math.random() * loadingMessagesDone.length)];
-    loadingScreen.classList.add("hidden")
+if (window.location.search == "?skipLoading") {
+    siteContent.classList.remove("hidden")
+    loadingScreen.style.display = "none";
+    document.body.style.overflow = "scroll";
+}
+else {
     setTimeout(() => {
-        siteContent.classList.remove("hidden")
-        loadingScreen.style.display = "none"
-        document.body.style.overflow = "scroll";
-    }, 2000)
-}, loadingTime)
+        clearInterval(loadingTextChange)
+        loadingText.textContent = loadingMessagesDone[Math.floor(Math.random() * loadingMessagesDone.length)];
+        loadingScreen.classList.add("hidden")
+        setTimeout(() => {
+            siteContent.classList.remove("hidden")
+            loadingScreen.style.display = "none"
+            document.body.style.overflow = "scroll";
+        }, 2000)
+    }, loadingTime)
+}
+
 
 if (loadingSkip) {
     loadingSkip.addEventListener("click", () => {
