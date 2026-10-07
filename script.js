@@ -2,6 +2,7 @@ const loadingScreen = document.querySelector(".loading-screen")
 const loadingText = document.querySelector(".loading-text")
 const loadingSkip = document.querySelector(".loading-skip")
 const siteContent = document.querySelector(".site-content")
+const desktop = document.querySelector(".desktop")
 const loadingTime = Math.floor(Math.random() * (30000 - 7000 + 1)) + 7000;
 const loadingMessages = [
     "Loading...",
@@ -84,6 +85,9 @@ else {
     }, loadingTime)
 }
 
+if (window.location.search == "?old") {
+    desktop.style.display = "none"
+}
 
 if (loadingSkip) {
     loadingSkip.addEventListener("click", () => {

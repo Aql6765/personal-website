@@ -86,3 +86,29 @@ body {
     color: inherit;
     font-family: 'Geist'
 }
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #292929;
+}
+
+.desktop {
+    inset: 0;
+    position: fixed;
+    z-index: 100;
+    background-image: url('assets/wallpaper.png');
+}
+
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background-color: #3866DA;
+    z-index: 101;
+    height: 35px;
+    border-radius: 10px;
+}
