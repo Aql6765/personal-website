@@ -1,10 +1,3 @@
-const loadingScreen = document.querySelector(".loading-screen")
-const loadingText = document.querySelector(".loading-text")
-const loadingSkip = document.querySelector(".loading-skip")
-const siteContent = document.querySelector(".site-content")
-const desktop = document.querySelector(".desktop")
-const stopButton = document.querySelector(".stopButton")
-const aboutMeButton = document.querySelector(".aboutMeButton")
 const loadingTime = Math.floor(Math.random() * (30000 - 7000 + 1)) + 7000;
 const loadingMessages = [
     "Loading...",
@@ -88,10 +81,6 @@ else {
     }, loadingTime)
 }
 
-if (window.location.search == "?old") {
-    desktop.style.display = "none"
-}
-
 if (loadingSkip) {
     loadingSkip.addEventListener("click", () => {
         clearInterval(loadingTextChange)
@@ -102,21 +91,5 @@ if (loadingSkip) {
             loadingScreen.style.display = "none"
             document.body.style.overflow = "scroll";
         }, 2000)
-    })
-}
-
-if (stopButton) {
-    const scream = new Audio("assets/scream.mp3")
-    stopButton.addEventListener("click", () => {
-        scream.currentTime = 0;
-        scream.play()
-    })
-}
-
-if (aboutMeButton) {
-    const scream = new Audio("assets/scream.mp3")
-    aboutMeButton.addEventListener("click", () => {
-        scream.currentTime = 0;
-        scream.play()
     })
 }
