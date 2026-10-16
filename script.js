@@ -3,6 +3,7 @@ const loadingText = document.querySelector(".loading-text")
 const loadingSkip = document.querySelector(".loading-skip")
 const siteContent = document.querySelector(".site-content")
 const desktop = document.querySelector(".desktop")
+const hideScreen = document.querySelector(".hideScreen")
 const stopButton = document.querySelector(".stopButton")
 const aboutMeButton = document.querySelector(".aboutMeButton")
 const loadingTime = Math.floor(Math.random() * (30000 - 7000 + 1)) + 7000;
@@ -119,4 +120,10 @@ if (aboutMeButton) {
         scream.currentTime = 0;
         scream.play()
     })
+}
+
+if (window.location.search == "?showScreen") {
+    hideScreen.classList.add("hidden")
+    siteContent.classList.remove("hidden")
+    loadingScreen.style.display = "none"
 }
